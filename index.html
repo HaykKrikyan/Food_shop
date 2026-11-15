@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-md bg-body border-bottom sticky-top" id="top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#top">Recipe Finder</a>
+
+  
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+   
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#recipes">Recipes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#recipeCarousel"
+            data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#recipeCarousel"
+            data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#recipeCarousel"
+            data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides --><div class="carousel-inner">
+
+    <div class="carousel-item active">
+        <img src="https://placehold.co/1400x550/e8c9a0/333?text=Delicious+Pasta"
+             class="d-block w-100 h-100 object-fit-cover" alt="Pasta">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"></div>
+       
+    </div>
+
+    <div class="carousel-item">
+        <img src="https://placehold.co/1400x550/c5d8b0/333?text=Fresh+Salads"
+             class="d-block w-100 h-100 object-fit-cover" alt="Salad">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"></div>
+     
+    </div>
+
+    <div class="carousel-item">
+        <img src="https://placehold.co/1400x550/e6b7a5/333?text=Sweet+Desserts"
+             class="d-block w-100 h-100 object-fit-cover" alt="Desserts">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"></div>
+       
+    </div>
+
+</div>
+
+    <!-- Previous button -->
+    <button class="carousel-control-prev" type="button"
+        data-bs-target="#recipeCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <!-- Next button -->
+    <button class="carousel-control-next" type="button"
+        data-bs-target="#recipeCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+
+
+
+
+<div class="Forcolor">
+
+<!-- Recipe Library -->
+<section class="container py-5">
+
+    <!-- Title -->
+    <div class="mb-4">
+        <h2 class="fw-bold">Recipe Library</h2>
+        <p class="text-muted">Find your next favorite meal</p>
+    </div>
+
+    <!-- Search -->
+    <div class="mb-4">
+        <input type="text" id="searchInput"
+               class="form-control form-control-lg"
+               placeholder="Search by dish or ingredient...">
+    </div>
+
+    <!-- Category Buttons -->
+    <div class="d-flex flex-wrap gap-2 mb-4">
+
+        <button aria-checked="true" class="btn btn-success category-btn active"
+                data-category="all">All</button>
+
+        <button   class="btn btn-outline-success category-btn"
+                data-category="pasta">Pasta</button>
+
+        <button  class="btn btn-outline-success category-btn"
+                data-category="soup">Soup</button>
+
+        <button  class="btn btn-outline-success category-btn"
+                data-category="beef">Beef</button>
+
+        <button  class="btn btn-outline-success category-btn"
+                data-category="salad">Salad</button>
+
+        <button  class="btn btn-outline-success category-btn"
+                data-category="dessert">Dessert</button>
+
+    </div>
+
+    <!-- Recipe Cards -->
+    
+
+        <!-- Card 2 -->
+        
+        <!-- Card 3 -->
+       
+         
+
+        <!-- Card 4 -->
+     
+
+    <!-- No Results Message -->
+    <p id="noResults" class="text-center text-muted mt-4 d-none">
+        No recipes found. Try another search.
+    </p>
+
+</section>
+<!-- More Recipes Section -->
+<section class="container py-5">
+
+
+    <section class="container py-5">
+  <h2 class="fw-bold">More Recipes</h2>
+  <p class="text-muted mb-4">Discover more delicious meals</p>
+
+  <!-- ROW 1 -->
+  <div class="row g-4 mb-4">
+    <div class="col-12 col-md-6 col-lg-3" data-category="Pasta">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.sipandfeast.com/wp-content/uploads/2022/09/spaghetti-carbonara-recipe-snippet.jpg" class="card-img-top" alt="Spaghetti Carbonara">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Pasta</span>
+          <h5 class="card-title">Spaghetti Carbonara</h5>
+          <p class="card-text">Creamy Roman pasta with eggs, pecorino cheese, black pepper and crispy guanciale.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-category="Pasta">
+      <div class="card h-100 shadow-sm">
+        <img src="https://theplantbasedschool.com/wp-content/uploads/2024/01/Penne-with-arrabbiata-sauce-4-500x500.jpg" class="card-img-top" alt="Penne Arrabbiata">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Pasta</span>
+          <h5 class="card-title">Penne Arrabbiata</h5>
+          <p class="card-text">Penne in a spicy tomato sauce with garlic, chili flakes and fresh parsley.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-category="Pasta">
+      <div class="card h-100 shadow-sm">
+        <img src="https://assets.sharkninja.com/image/upload/c_fill,w_400,h_400,ar_1:1,f_auto,g_auto,q_auto,dpr_2.0,b_rgb:FFFFFF/v1/recipes/Beef-Lasagna" class="card-img-top" alt="Beef Lasagna">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Pasta</span>
+          <h5 class="card-title">Beef Lasagna</h5>
+          <p class="card-text">Layers of pasta, rich meat sauce, béchamel and melted mozzarella.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-category="Soup">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2022/09/Tomato-Basil-Soup-Recipe.jpg" class="card-img-top" alt="Tomato Basil Soup">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Soup</span>
+          <h5 class="card-title">Tomato Basil Soup</h5>
+          <p class="card-text">Smooth roasted tomato soup with fresh basil and a drizzle of cream.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+  
+
+  <!-- ROW 2 -->
+  
+    <div class="col-12 col-md-6 col-lg-3" data-category="Soup">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.allrecipes.com/thmb/hausofqzET48XarfUPIMpxUpc1U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/26460-quick-and-easy-chicken-noodle-soup-VAT-Beauty-4x3-cc0d7f6b09d04713b82f2ba7cb32d711.jpg" class="card-img-top" alt="Chicken Noodle Soup">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Soup</span>
+          <h5 class="card-title">Chicken Noodle Soup</h5>
+          <p class="card-text">Warm homemade broth with tender chicken, carrots, celery and egg noodles.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-category="Beef">
+      <div class="card h-100 shadow-sm">
+        <img src="https://nebraskastarbeef.com/wp-content/uploads/2022/09/52913995_m-scaled.jpg" class="card-img-top" alt="Grilled Beef Steak">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Beef</span>
+          <h5 class="card-title">Grilled Beef Steak</h5>
+          <p class="card-text">Juicy ribeye steak grilled with garlic butter and rosemary.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-category="Beef">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.allrecipes.com/thmb/mSWde3PHTu-fDkbvWBw0D1JlS8U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25202beef-stroganoff-iii-ddmfs-3x4-233-0f26fa477e9c446b970a32502468efc6.jpg" class="card-img-top" alt="Beef Stroganoff">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Beef</span>
+          <h5 class="card-title">Beef Stroganoff</h5>
+          <p class="card-text">Tender beef strips and mushrooms in a creamy sauce over noodles.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-category="Salad">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.recipetineats.com/tachyon/2016/05/Caesar-Salad_7-SQ.jpg" class="card-img-top" alt="Caesar Salad">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Salad</span>
+          <h5 class="card-title">Caesar Salad</h5>
+          <p class="card-text">Crisp romaine lettuce with parmesan, croutons and classic Caesar dressing.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+ 
+
+  <!-- ROW 3 -->
+ 
+    <div class="col-12 col-md-6 col-lg-3" data-category="Salad">
+      <div class="card h-100 shadow-sm">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvL6w9Vv15AIYyzeTrDsAiSsFUv0Ijy8yvEdbgMAiwvdpELY6TQt5dmOjv&s=10" class="card-img-top" alt="Greek Salad">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Salad</span>
+          <h5 class="card-title">Greek Salad</h5>
+          <p class="card-text">Tomatoes, cucumber, olives and feta cheese with olive oil and oregano.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-category="Dessert">
+      <div class="card h-100 shadow-sm">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgcwx0GQCtd2nYftcBy75EgNRPaXPE3S3LBS-CdD__mkYQNUenOddJgTk&s=10" class="card-img-top" alt="Tiramisu">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Dessert</span>
+          <h5 class="card-title">Tiramisu</h5>
+          <p class="card-text">Espresso-soaked ladyfingers, mascarpone cream and cocoa.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-category="Dessert">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.recipetineats.com/tachyon/2020/03/Brownies_0-SQ.jpg" class="card-img-top" alt="Chocolate Brownie">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Dessert</span>
+          <h5 class="card-title">Chocolate Brownie</h5>
+          <p class="card-text">Rich, fudgy brownie with a crackly top and chocolate chunks.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3" data-category="Dessert">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.eatbetter.app/_next/image?url=https%3A%2F%2Faisparks.blob.core.windows.net%2Featbetter-cdn%2Ffood-images%2Forman-meyveli-ev-yapimi-cheesecake-1790762654214.webp&w=1080&q=75" class="card-img-top" alt="Berry Cheesecake">
+        <div class="card-body d-flex flex-column">
+          <span class="badge text-bg-success align-self-start mb-2">Dessert</span>
+          <h5 class="card-title">Berry Cheesecake</h5>
+          <p class="card-text">Creamy New York style cheesecake topped with fresh berry sauce.</p>
+          <a href="#" class="btn btn-outline-success mt-auto">View recipe</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+</section>
+
+
+
+<section class="container py-5">
+
+    <!-- Section Title -->
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Services</h2>
+        <p class="text-muted">From a box of ingredients to a chef in your kitchen.</p>
+    </div>
+
+    <!-- Cards Row -->
+    <div class="row flex g-4">
+         <div class="card" style="max-width: 320px;">
+  <div class="card-body">
+    <h4 class="card-title">Meal plan delivery</h4>
+    <p class="card-subtitle fg-3">With a card subtitle</p>
+    <p class="card-text">Enjoy fresh, delicious meals delivered straight to your home every week.</p>
+    <p  class="bold">From $39 per week</p>
+    <button type="button" class="btn-solid theme-primary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Request
+</button>
+  </div>
+</div >
+<div class="card" style="max-width: 320px;">
+  <div class="card-body">
+    <h4 class="card-title">Private chef</h4>
+    <p class="card-subtitle fg-3">With a card subtitle</p>
+    <p class="card-text">Let our professional chefs prepare delicious meals for your special occasions.</p>
+    <p class="bold">From $120</p>
+    <button type="button" class="btn-solid theme-primary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Request
+</button>
+  </div>
+</div>
+<div class="card" style="max-width: 320px;">
+  <div class="card-body">
+    <h4 class="card-title">Cooking class</h4>
+    <p class="card-subtitle fg-3">With a card subtitle</p>
+    <p class="card-text">Learn new cooking skills and discover exciting recipes with our expert chefs.</p>
+    <p class="bold">$25 per person</p>
+    <button type="button" class="btn-solid theme-primary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Request
+</button>
+  </div>
+</div>
+<div class="card" style="max-width: 320px;">
+  <div class="card-body">
+    <h4 class="card-title">Example card title</h4>
+    <p class="card-subtitle fg-3">With a card subtitle</p>
+    <p class="card-text">Make your celebrations special with freshly prepared food for every guest.</p>
+    <p  class="bold" >From $15 per guest</p>
+    <button type="button" class="btn-solid theme-primary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Request
+</button>
+  </div>
+</div>
+    </div>
+</section>
+
+
+<!-- How It Works Section -->
+<section class="py-5 text-center" id="how">
+  <div class="container">
+
+    <h2 class="mb-2">How it works</h2>
+    <p class="lead text-body-secondary mb-5 col-lg-6 mx-auto">
+      Three simple steps from choosing a dish to eating it.
+    </p>
+
+    <ol class="row row-cols-1 row-cols-md-3 g-4 justify-content-center list-unstyled mb-0">
+
+      <li class="col">
+        <span class="badge text-bg-primary rounded-circle d-inline-flex align-items-center justify-content-center fs-5 mb-3"
+              style="width: 2.75rem; height: 2.75rem;">1</span>
+        <h3 class="h5">Pick recipes</h3>
+        <p class="text-body-secondary mb-0 mx-auto" style="max-width: 28ch;">
+          Search, filter and save the dishes you like.
+        </p>
+      </li>
+
+      <li class="col">
+        <span class="badge text-bg-primary rounded-circle d-inline-flex align-items-center justify-content-center fs-5 mb-3"
+              style="width: 2.75rem; height: 2.75rem;">2</span>
+        <h3 class="h5">Plan your week</h3>
+        <p class="text-body-secondary mb-0 mx-auto" style="max-width: 28ch;">
+          Add dinners to the meal plan and get one shopping list.
+        </p>
+      </li>
+
+      <li class="col">
+        <span class="badge text-bg-primary rounded-circle d-inline-flex align-items-center justify-content-center fs-5 mb-3"
+              style="width: 2.75rem; height: 2.75rem;">3</span>
+        <h3 class="h5">Cook or order</h3>
+        <p class="text-body-secondary mb-0 mx-auto" style="max-width: 28ch;">
+          Shop yourself, or request delivery or a chef.
+        </p>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="container py-5">
+
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">What Customers Say</h2>
+        <p class="text-muted">
+            See what people think about our recipes and services.
+        </p>
+    </div>
+
+    <!-- Testimonials Row -->
+    <div class="row g-4">
+
+        <!-- Testimonial 1 -->
+        <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+                <div class="text-warning fs-3 mb-3">
+                    ★★★★★
+                </div>
+
+                <p class="card-text text-muted">
+                    "The weekly list saved me an hour of planning every Sunday."
+                </p>
+
+                <div class="mt-auto pt-3 border-top">
+                    <h6 class="fw-bold mb-1">Anna</h6>
+                    <small class="text-muted">Yerevan</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+                <div class="text-warning fs-3 mb-3">
+                    ★★★★★
+                </div>
+
+                <p class="card-text text-muted">
+                    "The chef was on time and the kitchen was spotless afterwards."
+                </p>
+
+                <div class="mt-auto pt-3 border-top">
+                    <h6 class="fw-bold mb-1">David</h6>
+                    <small class="text-muted">Gyumri</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+                <div class="text-warning fs-3 mb-3">
+                    ★★★★★
+                </div>
+
+                <p class="card-text text-muted">
+                    "Our class made pasta from scratch. The kids loved it."
+                </p>
+
+                <div class="mt-auto pt-3 border-top">
+                    <h6 class="fw-bold mb-1">Lilit</h6>
+                    <small class="text-muted">Yerevan</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="container py-5">
+
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Frequently Asked Questions</h2>
+        <p class="text-muted">
+            Find answers to the most common questions.
+        </p>
+    </div>
+
+    <!-- Accordion -->
+    <div class="accordion mx-auto" id="faqAccordion" style="max-width: 850px;">
+
+        <!-- Question 1 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#questionOne">
+                    How does meal plan delivery work?
+                </button>
+            </h2>
+
+            <div id="questionOne" class="accordion-collapse collapse show"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Choose your favorite meals, select your delivery date,
+                    and we will prepare and deliver your weekly meal plan
+                    directly to your door.
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#questionTwo">
+                    Do you cover dietary needs?
+                </button>
+            </h2>
+
+            <div id="questionTwo" class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes! We offer vegetarian, vegan, gluten-free and
+                    other meal options. You can tell us about your
+                    dietary preferences when planning your meals.
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#questionThree">
+                    How early should I book a chef or catering?
+                </button>
+            </h2>
+
+            <div id="questionThree" class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    We recommend booking at least 3-5 days in advance.
+                    For large events and catering services, earlier
+                    reservations are recommended.
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#questionFour">
+                    Can I cancel?
+                </button>
+            </h2>
+
+            <div id="questionFour" class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, you can cancel your order or booking.
+                    Please contact our support team as early as possible
+                    to discuss cancellation options.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Request a Service Section -->
+<section class="container  py-5">
+
+    <!-- Section Title -->
+   <section class="pt-5 mt-5" id="contact">
+  <h2>Request a service</h2>
+  <p class="lead text-body-secondary">
+    Tell us what you need and we will reply within one business day.
+  </p>
+
+  <form id="contactForm" class="col-lg-6 px-0" novalidate>
+
+    <div class="mb-3">
+      <label class="form-label" for="c-name">Name</label>
+      <input class="form-control" id="c-name" autocomplete="name">
+      <div class="invalid-feedback" id="c-name-err"></div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="c-email">Email</label>
+      <input class="form-control" id="c-email" type="email" autocomplete="email">
+      <div class="invalid-feedback" id="c-email-err"></div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="c-service">Service</label>
+      <select class="form-select" id="c-service">
+        <option>Meal plan delivery</option>
+        <option>Private chef</option>
+        <option>Cooking class</option>
+        <option>Party catering</option>
+        <option>Something else</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="c-msg">Message (optional)</label>
+      <textarea class="form-control" id="c-msg" rows="3"></textarea>
+    </div>
+
+    <button class="btn btn-primary rounded-pill px-4" type="submit">Send request</button>
+    <p class="text-success fw-semibold mt-3" id="contactOk" role="status"></p>
+  </form>
+</section>
+
+    <!-- Form -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+
+            <div class="card border-0 shadow-sm p-4 p-md-5">
+
+                <form>
+
+                    <!-- Name -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label fw-semibold">
+                            Name
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               id="name"
+                               placeholder="Enter your name"
+                               required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-semibold">
+                            Email
+                        </label>
+                        <input type="email"
+                               class="form-control"
+                               id="email"
+                               placeholder="Enter your email"
+                               required>
+                    </div>
+
+                    <!-- Service -->
+                    <div class="mb-3">
+                        <label for="service" class="form-label fw-semibold">
+                            Service
+                        </label>
+
+                        <select class="form-select" id="service" required>
+                            <option value="" selected disabled>
+                                Choose a service
+                            </option>
+                            <option value="meal-plan">Meal plan delivery</option>
+                            <option value="private-chef">Private chef</option>
+                            <option value="cooking-class">Cooking class</option>
+                            <option value="party-catering">Party catering</option>
+                            <option value="other">Something else</option>
+                        </select>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="mb-4">
+                        <label for="message" class="form-label fw-semibold">
+                            Message (optional)
+                        </label>
+
+                        <textarea class="form-control"
+                                  id="message"
+                                  rows="5"
+                                  placeholder="Tell us more about your request..."></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            Send Request
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+
+        <h5 class="fw-bold mb-2">Recipe Finder</h5>
+
+        <p class="text-white-50 mb-0">
+            Good food, planned simply.
+        </p>
+
+        <hr class="border-secondary my-3">
+
+        <small class="text-white-50">
+            &copy; 2026 Recipe Finder. All rights reserved.
+        </small>
+
+    </div>
+</footer>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
